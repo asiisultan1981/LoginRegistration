@@ -3,17 +3,17 @@ package com.example.loginregistration.Models;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
-    @SerializedName("id")
-    private String Id;
-
     @SerializedName("response")
-    private String Response;
+    private String  Response;
 
-    public String getId() {
-        return Id;
-    }
+    @SerializedName("user_id")
+    private String UserId;
 
     public String getResponse() {
         return Response;
+    }
+
+    public String getUserId() {
+        return UserId;
     }
 }

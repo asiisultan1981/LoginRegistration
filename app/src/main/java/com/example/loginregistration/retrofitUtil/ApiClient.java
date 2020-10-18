@@ -13,11 +13,11 @@ public class ApiClient {
     public static Retrofit getApiClient(){
 
             if (retrofit == null){
-//                Gson gson = new GsonBuilder()
-//                        .setLenient()
-//                        .create();
+                Gson gson = new GsonBuilder()
+                        .setLenient()
+                        .create();
                 retrofit = new Retrofit.Builder().baseUrl(BASE_URL)
-                        .addConverterFactory(GsonConverterFactory.create())
+                        .addConverterFactory(GsonConverterFactory.create(gson))
                         .build();
             }
             return retrofit;
